@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+
+    <!-- SIMPLE CSS (BEGINNER LEVEL) -->
+    <style>
+        body {
+            background-color: #e3f2fd;   /* Page background */
+        }
+
+        table {
+            background-color: #ffffff;       /* Calculator background */
+        }
+
+        button {
+            background-color: #bbdefb;
+            color: #0d47a1;
+            width: 50px;
+            height: 50px;
+        }
+
+        input {
+            height: 40px;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<hr>
+<h1><center>BASIC CALCULATOR</center></h1>
+<a href="index.html">Home</a>&nbsp; | &nbsp;
+<a href="#about">About</a>&nbsp; | &nbsp;
+<a href="#Calculator">Calculator</a>&nbsp; | &nbsp;
+<a href="#contact">Contact</a>
+<hr>
+<br>
+<h2 align='center'> This is a Basic Calculator built using HTML, CSS AND JavaScript.</h2>
+<br>
+<h3>HOW TO USE: </h3>
+<ul>
+    <li>Click the numbers to enter the values.</li>
+    <li>Use <b>+, -, *, % </b> symbols to perform operations.</li>
+    <li>Press <strong><i>C</i></strong> to clear all the entered values.</li>
+    <li>Press <strong><i>=</i></strong> to get result.</li>
+</ul>
+<table border="6" cellpadding="14" align="center" id="Calculator">
+
+    <tr>
+        <td colspan="4">
+            <input type="text" id="result" disabled style="width:100%;">
+        </td>
+    </tr>
+
+    <tr>
+        <td><button onclick="add('1')">1</button></td>
+        <td><button onclick="add('2')">2</button></td>
+        <td><button onclick="add('3')">3</button></td>
+        <td><button onclick="add('+')">+</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="add('4')">4</button></td>
+        <td><button onclick="add('5')">5</button></td>
+        <td><button onclick="add('6')">6</button></td>
+        <td><button onclick="add('-')">-</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="add('7')">7</button></td>
+        <td><button onclick="add('8')">8</button></td>
+        <td><button onclick="add('9')">9</button></td>
+        <td><button onclick="add('*')">*</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="add('0')">0</button></td>
+        <td><button onclick="calculate()">=</button></td>
+        <td><button onclick="clearResult()">C</button></td>
+        <td><button onclick="add('/')">/</button></td>
+    </tr>
+
+</table>
+<hr>
+<h3 id="about">About This Calculator</h3>
+<p>This is designed for beginners to perform basic arithemetic 
+    operations such as addition, subtraction, multiplication and division.
+</p>
+<hr>
+<h3>Features</h3>
+<ul>
+    <li>Basic arithmetic operations</li>
+    <li>Simple and user-friendly design</li>
+    <li>Fast calculation</li>
+    <li>Error-free button input</li>
+</ul>
+<h3>Limitations</h3>
+<p>
+    This calculator supports only basic arithmetic operations.
+    Advanced features will be added in future versions.
+</p>
+<hr>
+<br>
+
+<p align="center" id="contact">Created by K SRI PAVITHRAN | 2026</p>
+<br>
+
+<script>
+    function add(value) {
+        document.getElementById("result").value += value;
+    }
+
+    function clearResult() {
+        document.getElementById("result").value = "";
+    }
+
+    function calculate() {
+        document.getElementById("result").value =
+            eval(document.getElementById("result").value);
+    }
+</script>
+
+</body>
+</html>
